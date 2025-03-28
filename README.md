@@ -9,6 +9,13 @@ This module serves as a CLI framework to create CLIs in an easier way for python
 
 -----
 
+## 🚀 Quick Start (Docker)
+
+```bash
+docker build --no-cache -f .github/actions/Dockerfile -t motoko-cli-builder .github/actions/
+docker run -v "$(pwd)":/app -w /app -it motoko-cli-builder:latest
+```
+
 ## Table of Contents
 
 - [Installation](#installation)
