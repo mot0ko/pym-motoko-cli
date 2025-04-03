@@ -19,6 +19,14 @@ jobs:
         id: build
         uses: ./.github/actions
       
+      - name: Publish Python Test Results
+        uses: dorny/test-reporter@v2
+        if: always()  # ensures it runs even if tests fail
+        with:
+          name: JUnit Tests
+          path: python-report.xml
+          reporter: java-junit
+      
       - uses: actions/upload-artifact@v4
         if: always()  # ensures it runs even if tests fail
         with:
