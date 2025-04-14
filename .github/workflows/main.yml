@@ -46,6 +46,9 @@ jobs:
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
       - name: Display Python version
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           python -c "import sys; print(sys.version)"
           python -m pip install --upgrade pip
