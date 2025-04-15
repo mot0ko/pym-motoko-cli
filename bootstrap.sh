@@ -5,6 +5,7 @@
 # pip install twine
 
 git config --global --add safe.directory /app
+git config --global --add safe.directory /github/workspace
 
 version_file="src/motoko_cli/__about__.py"
 tmp_version_file="src/motoko_cli/__about__-tmp.py"
