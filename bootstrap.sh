@@ -4,8 +4,10 @@
 # pip install twine hatch numpy poetry pytest setuptools wheel
 # pip install twine
 
-git config --global --add safe.directory /app
-git config --global --add safe.directory /github/workspace
+if [ "$CI" != "" ]; then
+  git config --global --add safe.directory /app
+  git config --global --add safe.directory /github/workspace
+fi
 
 version_file="src/motoko_cli/__about__.py"
 tmp_version_file="src/motoko_cli/__about__-tmp.py"
