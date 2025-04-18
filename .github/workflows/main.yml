@@ -36,7 +36,7 @@ jobs:
           name: py package
           path: dist/motoko_cli-*.tar.gz
           
-      - name: Publish to PyPI
+      - name: Set python version
         # This is the version of the action for setting up Python, not the Python version.
         uses: actions/setup-python@v5
         with:
@@ -45,7 +45,7 @@ jobs:
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
       # You can test your matrix by printing the current Python version
-      - name: Display Python version
+      - name: Deploy package
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
