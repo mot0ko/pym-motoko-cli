@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'main'
+      - '!release/*' # Keeping the line to remember to enable it later
 permissions:
   contents: read
   actions: read
