@@ -4,6 +4,8 @@ on:
     branches:
       - 'main'
       - '!release/*' # Keeping the line to remember to enable it later
+    tags: 
+      - ''     # This excludes all tags from being triggers
 permissions:
   contents: read
   actions: read
