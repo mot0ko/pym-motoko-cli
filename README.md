@@ -14,6 +14,9 @@ This module serves as a CLI framework to create CLIs in an easier way for python
 ```bash
 docker build --no-cache -f .github/actions/Dockerfile -t motoko-cli-builder .github/actions/
 docker run -v "$(pwd)":/app -w /app -it motoko-cli-builder:latest
+
+# If you want to run the "runner" version of the docker container:
+docker run -v "$(pwd)":/app -w /app -e CI=true -it motoko-cli-builder:latest
 ```
 
 ## Table of Contents
